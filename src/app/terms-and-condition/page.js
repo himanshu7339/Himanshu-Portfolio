@@ -22,7 +22,7 @@ const TermsAndConditions = () => {
         <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to Himanshudm.</li>
         <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
         <li><strong>Service</strong> refers to the Website.</li>
-        <li><strong>Terms and Conditions</strong> (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement has been created with the help of the <a href="https://www.termsfeed.com/terms-conditions-generator/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">Terms and Conditions Generator</a>.</li>
+        <li><strong>Terms and Conditions</strong> (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service.</li>
         <li><strong>Third-party Social Media Service</strong> means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.</li>
         <li><strong>Website</strong> refers to Himanshudm, accessible from <a href="https://www.himanshudm.pro/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">https://www.himanshudm.pro/</a></li>
         <li><strong>You</strong> means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
