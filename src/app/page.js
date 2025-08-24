@@ -3,9 +3,9 @@ import CTA from "../../components/CTA";
 
 import HeroSection from "../../components/Hero";
 import ContentSection from "../../components/ContentSection";
-import GetHelp from "../../components/GetHelp";
 import WhatHappens from "../../components/WhatHappen";
 import Problem from "../../components/Problem";
+import Help from "../../components/Help";
 export default function Home() {
   return (
     <>
@@ -19,7 +19,7 @@ export default function Home() {
       <Steps />
 
       <WhatHappens />
-      <GetHelp />
+      <Help />
 
       <CTA />
 

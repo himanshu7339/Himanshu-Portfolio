@@ -1,9 +1,10 @@
+import React from 'react'
 import Image from "next/image";
 import Laptop from "@/Images/Laptop.svg";
-import Link from "next/Link"
+import Link from 'next/link';
 
 
-export default function GetHelp() {
+const Help = () => {
   return (
     <section className="bg-white text-black body-font">
       <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
@@ -39,5 +40,7 @@ export default function GetHelp() {
         </div>
       </div>
     </section>
-  );
+  )
 }
+
+export default Help
