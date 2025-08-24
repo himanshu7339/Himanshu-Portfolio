@@ -1,15 +1,16 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbzkJjk3BucMzUevKxUsLvbQY1z3hXnA1MiDuXqQGkzIlL2LGvSYnUTZBSKek79Ji3wX/exec";
+const scriptURL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_SCRIPT;
 
 const handleInput = (e) => {
-  e.target.value = e.target.value.replace(/[^0-9]/g, ""); // Sirf digits allow
+  e.target.value = e.target.value.replace(/[^0-9]/g, ""); // Allow only digits
 };
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const router = useRouter();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +18,6 @@ const Contact = () => {
 
     const form = e.target;
     const formData = new FormData(form);
-console.log(formData)
 
     try {
       const res = await fetch(scriptURL, {
@@ -27,6 +27,7 @@ console.log(formData)
       if (res.ok) {
         alert("Submitted Successfully.");
         form.reset();
+        router.push("/thankyou"); // Redirect to thank you page
       } else {
         alert("Submission failed. Please try again.");
       }
@@ -95,9 +96,7 @@ console.log(formData)
               />
             </div>
             <div>
-              <label className="block font-medium mb-1">
-                Describe Your Business (Short) *
-              </label>
+              <label className="block font-medium mb-1">Describe Your Business (Short) *</label>
               <textarea
                 name="describe-your-business"
                 rows={4}
@@ -105,7 +104,6 @@ console.log(formData)
               ></textarea>
             </div>
 
-           
             <div className="flex justify-end">
               <button
                 type="submit"
