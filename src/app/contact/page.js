@@ -1,0 +1,144 @@
+"use client";
+import React, { useState } from "react";
+
+const scriptURL =
+  "https://script.google.com/macros/s/AKfycbzkJjk3BucMzUevKxUsLvbQY1z3hXnA1MiDuXqQGkzIlL2LGvSYnUTZBSKek79Ji3wX/exec";
+
+const handleInput = (e) => {
+  e.target.value = e.target.value.replace(/[^0-9]/g, ""); // Sirf digits allow
+};
+
+const Contact = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.target;
+    const formData = new FormData(form);
+console.log(formData)
+
+    try {
+      const res = await fetch(scriptURL, {
+        method: "POST",
+        body: formData,
+      });
+      if (res.ok) {
+        alert("Submitted Successfully.");
+        form.reset();
+      } else {
+        alert("Submission failed. Please try again.");
+      }
+    } catch (error) {
+      alert("Error occurred. Please try again.");
+      console.error(error);
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  return (
+    <section className="bg-white min-h-screen py-16 px-8 flex items-start justify-center">
+      <div className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-8">
+        {/* Inquiry Form */}
+        <div className="md:w-2/3 w-full">
+          <h1 className="text-5xl font-bold text-center mb-12">Inquiry</h1>
+          <form
+            name="submit-to-google-sheet"
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
+            <div>
+              <label className="block font-medium mb-1">Your Name *</label>
+              <input
+                name="name"
+                type="text"
+                required
+                className="w-full border border-gray-300 rounded px-4 py-2 outline-none focus:border-orange-500"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">Phone Number</label>
+              <input
+                name="phone-number"
+                type="text"
+                onInput={handleInput}
+                maxLength={10}
+                placeholder="Enter phone number"
+                className="w-full border border-gray-300 rounded px-4 py-2 outline-none focus:border-orange-500"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">Your Email *</label>
+              <input
+                name="email"
+                type="email"
+                required
+                className="w-full border border-gray-300 rounded px-4 py-2 outline-none focus:border-orange-500"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">Country *</label>
+              <input
+                name="country"
+                type="text"
+                className="w-full border border-gray-300 rounded px-4 py-2 outline-none focus:border-orange-500"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">What service you need? *</label>
+              <input
+                name="What-service-you-need"
+                type="text"
+                className="w-full border border-gray-300 rounded px-4 py-2 outline-none focus:border-orange-500"
+              />
+            </div>
+            <div>
+              <label className="block font-medium mb-1">
+                Describe Your Business (Short) *
+              </label>
+              <textarea
+                name="describe-your-business"
+                rows={4}
+                className="w-full border border-gray-300 rounded px-4 py-2 outline-none focus:border-orange-500"
+              ></textarea>
+            </div>
+
+           
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-2 font-semibold rounded cursor-pointer disabled:opacity-60"
+              >
+                {isSubmitting ? "Submitting..." : "SUBMIT"}
+              </button>
+            </div>
+          </form>
+        </div>
+
+        {/* Address Section */}
+        <div className="md:w-1/3 w-full flex flex-col mt-10 md:mt-0 md:pl-8">
+          <h2 className="text-2xl font-semibold mb-4">Address</h2>
+          <div className="text-base flex flex-col gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-xl">📍</span>
+              <span>481 Chhatarpur Near Mata Chowk New Delhi 110074</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xl">📞</span>
+              <span>8376849918</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xl">✉️</span>
+              <span>Himanshusingh5t5t@gmail.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
