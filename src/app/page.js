@@ -1,6 +1,3 @@
-import Image from "next/image";
-import SectionImage from "@/Images/IMG_0115.webp"
-import Link from "next/link";
 import Steps from "../../components/Steps";
 import CTA from "../../components/CTA";
 
@@ -14,7 +11,7 @@ export default function Home() {
     <>
       <HeroSection />
 
-  <Problem/>
+      <Problem />
 
 
       <ContentSection />

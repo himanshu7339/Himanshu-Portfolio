@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Boy from "@/Images/boy.png";
+import Boy from "@/Images/Boy.png";
 
 export default function WhatHappens() {
   return (
