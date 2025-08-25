@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import React, { useState, useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const scriptURL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_SCRIPT;
 
@@ -11,6 +11,25 @@ const handleInput = (e) => {
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // State to hold UTM params
+  const [utmData, setUtmData] = useState({
+    utm_source: "",
+    utm_medium: "",
+    utm_campaign: "",
+    utm_term: "",
+  });
+
+  useEffect(() => {
+    // Try get from URL params first
+    const utm_source = searchParams.get("utm_source") || sessionStorage.getItem("utm_source") || "";
+    const utm_medium = searchParams.get("utm_medium") || sessionStorage.getItem("utm_medium") || "";
+    const utm_campaign = searchParams.get("utm_campaign") || sessionStorage.getItem("utm_campaign") || "";
+    const utm_term = searchParams.get("utm_term") || sessionStorage.getItem("utm_term") || "";
+
+    setUtmData({ utm_source, utm_medium, utm_campaign, utm_term });
+  }, [searchParams]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -27,7 +46,7 @@ const Contact = () => {
       if (res.ok) {
         alert("Submitted Successfully.");
         form.reset();
-        router.push("/thankyou"); // Redirect to thank you page
+        router.push("/thankyou");
       } else {
         alert("Submission failed. Please try again.");
       }
@@ -45,11 +64,11 @@ const Contact = () => {
         {/* Inquiry Form */}
         <div className="md:w-2/3 w-full">
           <h1 className="text-5xl font-bold text-center mb-12">Inquiry</h1>
-          <form
-            name="submit-to-google-sheet"
-            onSubmit={handleSubmit}
-            className="space-y-6"
-          >
+          <form name="submit-to-google-sheet" onSubmit={handleSubmit} className="space-y-6">
+            <input type="hidden" name="utm_source" value={utmData.utm_source} />
+            <input type="hidden" name="utm_medium" value={utmData.utm_medium} />
+            <input type="hidden" name="utm_campaign" value={utmData.utm_campaign} />
+            <input type="hidden" name="utm_term" value={utmData.utm_term} />
             <div>
               <label className="block font-medium mb-1">Your Name *</label>
               <input
