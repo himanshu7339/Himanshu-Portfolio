@@ -8,14 +8,14 @@ export default function WhatHappens() {
         {/* Left Content */}
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start text-left mb-16 md:mb-0">
           <h2 className="title-font sm:text-4xl text-3xl mb-6 font-bold">
-            What Happens If You Do Nothing?
+            Do Nothing, and
           </h2>
 
           <ul className="list-disc list-inside space-y-4 text-lg">
-            <li>Other stores will keep beating you</li>
-            <li>You&apos;ll have the same problems next year</li>
-            <li>You&apos;ll lose more customers</li>
-            <li>Your business won&apos;t grow</li>
+            <li>Competitors keep winning</li>
+            <li>The same problems hold you back next year</li>
+            <li>You lose out on future customers</li>
+            <li>Your store doesn’t grow</li>
           </ul>
 
           <h3 className="mt-8 text-2xl font-bold">

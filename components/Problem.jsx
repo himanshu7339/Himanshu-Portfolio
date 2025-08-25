@@ -24,7 +24,7 @@ export default function Problem() {
       <div className="container mx-auto px-6 text-left md:text-center">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12">
-          Do these Problems Sound Familiar?
+          Do These Sound Familiar?
         </h2>
 
         {/* Problems List */}
@@ -34,7 +34,7 @@ export default function Problem() {
             <X className="text-red-600 w-6 h-6 mt-1 mr-2" />
             <p className="text-lg font-medium text-gray-800">
               <span className="underline decoration-orange-500 decoration-2 underline-offset-4">
-                People visit your store
+                People look at your products
               </span>{" "}
               but don’t buy
             </p>
@@ -45,7 +45,7 @@ export default function Problem() {
             <X className="text-red-600 w-6 h-6 mt-1 mr-2" />
             <p className="text-lg font-medium text-gray-800">
               <span className="underline decoration-orange-500 decoration-2 underline-offset-4">
-                Other stores are taking
+                Competitors attract
               </span>{" "}
               your customers
             </p>
@@ -55,9 +55,9 @@ export default function Problem() {
           <div className="flex items-start md:justify-center text-left">
             <X className="text-red-600 w-6 h-6 mt-1 mr-2" />
             <p className="text-lg font-medium text-gray-800">
-              You spend money on{" "}
+              Ad spend isn’t leading{" "}
               <span className="underline decoration-orange-500 decoration-2 underline-offset-4">
-                ads but get no sales
+                to real sales
               </span>
             </p>
           </div>
@@ -68,7 +68,7 @@ export default function Problem() {
             <p className="text-lg font-medium text-gray-800">
               You want to grow but{" "}
               <span className="underline decoration-orange-500 decoration-2 underline-offset-4">
-                don’t know how
+                don’t know where to start
               </span>
             </p>
           </div>

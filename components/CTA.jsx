@@ -12,15 +12,15 @@ export default function CTA() {
             Want More Sales for Your Online Store?
           </h1>
           <h2 className="text-xl md:text-2xl font-semibold text-white mb-6 relative inline-block">
-            Talk to Me for FREE (30 Minutes)
+            Book a (30-minute) call and get
             <span className="block h-[2px] w-full bg-orange-500 absolute -bottom-1"></span>
           </h2>
 
           <ul className="list-disc list-inside space-y-2 text-lg mb-6">
-            <li>I'll check your business for free</li>
-            <li>3 things you can do today to get more sales</li>
-            <li>A simple plan for the next 3 months</li>
-            <li>No pressure to buy anything</li>
+            <li>A free review of your store</li>
+            <li>Three things you can do today</li>
+            <li>Your next 3-month plan</li>
+            <li>No payment required</li>
           </ul>
 
 <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}/contact`}>     <button className="bg-orange-500 text-white px-6 py-3 rounded-md font-semibold hover:bg-orange-600 transition cursor-pointer">

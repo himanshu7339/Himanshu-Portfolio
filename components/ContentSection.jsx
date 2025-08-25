@@ -10,25 +10,22 @@ export default function ContentSection() {
         {/* Left Content */}
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start text-left mb-16 md:mb-0">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-bold">
-            I Help Online Store Owners Like You
+            Specialized Help for Store Owners
           </h1>
           <p className="mb-6 text-lg font-semibold">
-            I know how hard it is to grow an online business.
-          </p>
-          <p className="mb-6 leading-relaxed">
-            I've helped 50+ online stores in the past 3 years get more sales.
+            I’ve teamed up with more than 50 Shopify and ecommerce stores to help them raise their monthly sales.
           </p>
 
           <ul className="mb-8 space-y-3 text-left">
-            <li>✓ I Get Results - My clients make 3-5x more money</li>
-            <li>✓ I Only Work with Online Stores - I know your business</li>
-            <li>✓ I Care About Your Profit - Every dollar should make you money</li>
+            <li>✓ My support helps stores sell 3× more, on average</li>
+            <li>✓ Honest advice: Strategies built only for your shop</li>
+            <li>✓ Growth focus: Every marketing rupee gets you closer to your goals</li>
           </ul>
 
           <div className="flex justify-start">
 
             <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}/contact`}>  <button className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded cursor-pointer">
-              BOOK FREE CALL
+              Chat About Your Store
             </button> </Link>
             
           </div>

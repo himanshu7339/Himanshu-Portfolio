@@ -10,19 +10,18 @@ export default function HeroSection() {
         {/* Left Side */}
         <div className="flex flex-col md:w-1/2 space-y-6 text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold leading-tight">
-  Is Your Online Store Not{" "}
-  Making{" "}
+  Is Your Online Store Struggling{" "}
+  to{" "}
   <br className="block md:hidden" />
-  Enough Sales?
+ Make Sales?
   <span className="hidden md:inline"> <br /> </span>
 </h1>
           <p className="text-lg text-gray-300 max-w-md">
-            Your competitors are making more money while you’re struggling with
-            the same old methods.
+           Your competitors are ahead, and using the same marketing tactics isn’t working anymore.
           </p>
           <div>
             <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}/contact`}> <button className="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition cursor-pointer">
-              GET FREE CALL
+             See What’s Possible
             </button>
             </Link>
           </div>

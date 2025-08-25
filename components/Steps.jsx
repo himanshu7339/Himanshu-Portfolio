@@ -3,17 +3,17 @@ export default function Steps() {
     {
       number: "1",
       title: "I Check Your Business",
-      text: "I look at what you're doing now (for free)",
+      text: "I review your store (for free)",
     },
     {
       number: "2",
       title: "I Make a Plan",
-      text: "I created a simple plan just for your store",
+      text: "Together, we set up a simple plan",
     },
     {
       number: "3",
       title: "We Make It Work",
-      text: "I help you get customers and sales",
+      text: "I help you attract more buyers",
     },
   ];
 
@@ -22,7 +22,7 @@ export default function Steps() {
       <div className="container mx-auto px-6 text-center">
         {/* Heading */}
         <h2 className="text-3xl font-bold text-gray-900 mb-12">
-          Here's How I Help You Make More Sales
+          How Growth Happens
         </h2>
 
         {/* Steps Grid */}

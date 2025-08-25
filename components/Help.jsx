@@ -12,18 +12,18 @@ const Help = () => {
         {/* Left Content */}
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col items-start text-left mb-16 md:mb-0">
           <h2 className="title-font sm:text-4xl text-3xl mb-6 font-bold">
-            But When You Get Help
+            Get Help, and
           </h2>
 
           <ul className="list-disc list-inside space-y-4 text-lg">
-            <li>More people will buy from your store</li>
-            <li>Your ads will actually make you money</li>
-            <li>You&apos;ll get more sales every month</li>
-            <li>Your business will become stronger</li>
+            <li>More visitors buy from your shop</li>
+            <li>Ads and emails start making you real income</li>
+            <li>Every month brings more sales</li>
+            <li>Your store gets stronger</li>
           </ul>
 
          <Link href={`${process.env.NEXT_PUBLIC_SITE_URL}/contact`} >  <button className="cursor-pointer mt-10 bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded">
-            LET&apos;S MAKE THIS YOUR REALITY
+            Let’s Make Change Happen
           </button>
           </Link>
         </div>
